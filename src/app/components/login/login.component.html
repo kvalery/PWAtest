@@ -1,0 +1,27 @@
+<p>
+ Google Social Login
+</p>
+
+<p>
+  https://developers.google.com/identity/sign-in/web/sign-in<br/>
+  https://www.npmjs.com/package/angularx-social-login<br/>
+  https://github.com/abacritt/angularx-social-login<br/>
+</p>
+
+<hr>
+
+<button (click)="signInWithGoogle()">
+  signIn
+</button>
+
+<button (click)="signOut()">
+  signOut
+</button>
+
+<br/>
+
+<button (click)="checkStorage()">
+  check localstorage
+</button>
+
+<pre class="test-data" >{{(user || 'no data' ) | json }}</pre>
