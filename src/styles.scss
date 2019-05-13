@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.header{
+  text-align: center;
+  padding:  10px 5px 5px;
+  border-radius: 5px 5px 0 0 ;
+  background: rgba(249, 232, 137, 0.29);
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.test-data{
+  padding: 3px 5px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  background: #e0e0e0;
+}
