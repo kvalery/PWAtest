@@ -9,6 +9,10 @@ import {
   AuthServiceConfig,
   GoogleLoginProvider
 } from 'angularx-social-login';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { ServiceWorkerTestComponent } from './components/service-worker-test/service-worker-test.component';
+import { WebWorkerTestComponent } from './components/web-worker-test/web-worker-test.component';
 
 const config = new AuthServiceConfig([
   {
@@ -24,12 +28,15 @@ export function provideConfig() {
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ServiceWorkerTestComponent,
+    WebWorkerTestComponent
   ],
   imports: [
     SocialLoginModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     {
